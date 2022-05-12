@@ -1,6 +1,6 @@
 ﻿<?php
 //Servidor de base de datos
-define("DB_HOST", "localhost:3307");
+define("DB_HOST", "localhost:3306");
 
 //Nombre de la base de datos
 define("DB_NAME", "sistema");
