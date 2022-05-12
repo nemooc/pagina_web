@@ -18,4 +18,3 @@ function traerProductos() {
 
 }
 traerProductos()
-$("#miId").text("Hola mundo")

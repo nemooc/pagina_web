@@ -24,8 +24,6 @@ switch ($_GET['op']) {
         }
         echo json_encode($data);
     break;
-    case "prueba":
-        echo "hola mundo";
-    break;
+    
 
 }

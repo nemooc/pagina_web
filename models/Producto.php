@@ -11,8 +11,6 @@ class Producto
     $sql = "SELECT * FROM productos";
     return ejecutarConsulta($sql);
     
-
-    
     }
    
 }
