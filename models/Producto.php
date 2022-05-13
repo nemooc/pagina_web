@@ -1,4 +1,5 @@
 <?php
+header("Content-type: image/jpeg");
 require '../config/connection.php';
 
 class Producto
@@ -10,8 +11,9 @@ class Producto
 
     public static function traerProductos ()
     {
-    $sql = "SELECT * FROM productos";
+    $sql = "SELECT p.*,CAST(i.foto AS CHAR(10000) CHARACTER SET utf8) as foto from productos as p LEFT JOIN imagenes as i ON p.id_imagen = i.id;";
     return ejecutarConsulta($sql);
+
     
     }
 
@@ -21,3 +23,6 @@ class Producto
     return ejecutarConsulta($sql);
    
     }
+
+
+}

@@ -1,6 +1,6 @@
 ﻿<?php
 //Servidor de base de datos
-define("DB_HOST", "localhost:3306");
+define("DB_HOST", "localhost:3307");
 
 //Nombre de la base de datos
 define("DB_NAME", "sistema");
@@ -9,7 +9,7 @@ define("DB_NAME", "sistema");
 define("DB_USERNAME", "root");
 
 //Clave del usuario de la base de datos
-define("DB_PASSWORD", "");
+define("DB_PASSWORD", "123456");
 
 //Codificacion de los caracteres
 define("DB_ENCODE", "utf8");

@@ -1,8 +1,10 @@
 * {
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
 }
 body {
+  
   margin: 0;
 }
 .img_logo {
