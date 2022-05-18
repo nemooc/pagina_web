@@ -11,7 +11,8 @@ require '../models/Producto.php';
 switch ($_GET['op']) {
 
     case "traerProductos":
-        $respuesta = Producto::traerProductos();
+        $categoria = $_GET['categoria'];
+        $respuesta = Producto::traerProductos($categoria);
         $data = array();
 
         while ($reg = $respuesta->fetch_object()){
@@ -20,7 +21,6 @@ switch ($_GET['op']) {
                 "id_produ" => $reg->id_productos,
                 "nombre" => $reg->nombre,   
                 "precio_venta" => $reg->precio_venta,
-                "foto"=> $reg->foto,
             );
         }
         echo json_encode($data);
