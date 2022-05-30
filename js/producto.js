@@ -6,7 +6,7 @@ function init() {
 }
 function traerProductos(categoriaNombre) {
     $.ajax({
-        url: '../ajax/producto.php?op=traerProductos',
+        url: '../ajax/productoAjax.php?op=traerProductos',
         data: { categoria: categoriaNombre },
         success: function (data) {
             let productos = "";
@@ -15,7 +15,7 @@ function traerProductos(categoriaNombre) {
                 productos += `
                 <div class="col-md-4">
                             <div class="card mb-4 shadow-sm">
-                                <div style="height:200px;background-content:center;background-size:cover;background-image: url(../img/2.jpeg); "> 
+                                <div style="height:200px;background-content:center;background-size:cover;background-image: url(../Imagenes_Cocinas/${element.nom_archivo});"> 
 
                                 </div>
 
@@ -32,7 +32,7 @@ function traerProductos(categoriaNombre) {
                 `;
             });
             $("#listadoProductos").html(productos)
-
+            console.log(JSON.parse(data))
         }
 
     });
@@ -40,7 +40,7 @@ function traerProductos(categoriaNombre) {
 }
 function traerCategorias() {
     $.ajax({
-        url: '../ajax/producto.php?op=traerCategoria',
+        url: '../ajax/productoAjax.php?op=traerCategoria',
         success: function (data) {
             let categoria = `<div>              
                                 <ul> 
@@ -60,7 +60,9 @@ function traerCategorias() {
             categoria += `       </ul>
                          </div>`;
             $("#listadoCategoria").html(categoria)
+
         }
+
     });
 
 

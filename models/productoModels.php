@@ -11,9 +11,10 @@ class Producto
 
     public static function traerProductos ($categoria)
     {
-        $sql = "SELECT * from productos";
+        $sql = "SELECT p.id_productos,p.nombre,p.precio_venta,i.nom_archivo from productos p LEFT JOIN imagenes i on p.id_imagen = i.id;";
         if ($categoria != "TODOS") {
-            $sql = "SELECT * from productos where categoria = '$categoria' ";
+            $sql = "SELECT p.id_productos,p.nombre,p.precio_venta,i.nom_archivo from productos p LEFT JOIN imagenes i on p.id_imagen = i.id
+            where p.categoria = '$categoria'";
         }
         
         return ejecutarConsulta($sql);

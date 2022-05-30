@@ -1,10 +1,6 @@
 <?php
 
-require '../models/Producto.php';
-
-
-
-
+require '../models/productoModels.php';
 
 
 
@@ -21,6 +17,7 @@ switch ($_GET['op']) {
                 "id_produ" => $reg->id_productos,
                 "nombre" => $reg->nombre,   
                 "precio_venta" => $reg->precio_venta,
+                "nom_archivo" => $reg->nom_archivo,
             );
         }
         echo json_encode($data);
