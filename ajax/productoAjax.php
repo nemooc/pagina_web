@@ -14,7 +14,7 @@ switch ($_GET['op']) {
         while ($reg = $respuesta->fetch_object()){
 
             $data[] = array( 
-                "id_produ" => $reg->id_productos,
+                "id_productos" => $reg->id_productos,
                 "nombre" => $reg->nombre,   
                 "precio_venta" => $reg->precio_venta,
                 "nom_archivo" => $reg->nom_archivo,
@@ -34,5 +34,9 @@ switch ($_GET['op']) {
         }
         echo json_encode($data);
     break;
-
+    case 'traerProducto':
+        $id = $_GET['id'];
+        $respuesta = Producto::traer_Producto($id);
+        echo json_encode($respuesta);
+        break;
 }

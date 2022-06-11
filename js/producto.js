@@ -24,7 +24,7 @@ function traerProductos(categoriaNombre) {
                                 <p>$${element.precio_venta}</p>
                                     <div class="d-flex justify-content-between align-items-center">
 
-                                            <button type="button" class="btn btn-info"><a href="../vistas/detalles_producto.html" style="text-decoration:none;color:white;">Ver mas</a></button>
+                                            <button type="button" class="btn btn-info" onClick="verDetalleProducto(${element.id_productos})">Ver mas</button>
                                     </div>
                                 </div>
                             </div>
@@ -38,6 +38,32 @@ function traerProductos(categoriaNombre) {
     });
 
 }
+function verDetalleProducto(id_producto) {
+    $.ajax({
+        url: '../ajax/productoAjax.php?op=traerProducto',
+        data: { id: id_producto },
+        success: function (data) {
+            data = JSON.parse(data)
+            let contenido = `
+                        <div class="col-12 col-lg-4">
+                                    <div style="height:200px;background-content:center;background-size:cover;background-image: url(../Imagenes_Cocinas/${data.nom_archivo});"> 
+                                    </div>
+                        </div>
+                        <div class="col-8 col-lg-8">
+                            <h2>${data.nombre}</h2>
+                            <p>${data.detalles}</p>
+                            <h4>$${data.precio_venta}</h4>
+                        </div>
+                          `;
+            $("#bodyDetalleProducto").html(contenido)
+            $("#detalleProductoModal").modal('show')
+
+        }
+    });
+}
+
+
+
 function traerCategorias() {
     $.ajax({
         url: '../ajax/productoAjax.php?op=traerCategoria',
