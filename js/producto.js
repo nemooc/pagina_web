@@ -2,8 +2,10 @@ function init() {
 
     verCategoria("TODOS")
     traerCategorias()
+    actualizarCantidadCarrito()
 
 }
+
 function traerProductos(categoriaNombre) {
     $.ajax({
         url: '../ajax/productoAjax.php?op=traerProductos',
@@ -32,7 +34,6 @@ function traerProductos(categoriaNombre) {
                 `;
             });
             $("#listadoProductos").html(productos)
-            console.log(JSON.parse(data))
         }
 
     });
@@ -53,6 +54,9 @@ function verDetalleProducto(id_producto) {
                             <h2>${data.nombre}</h2>
                             <p>${data.detalles}</p>
                             <h4>$${data.precio_venta}</h4>
+                            <input type="number" class="form-control" id="cantidad">
+                            <button type="button" class="btn btn-info" onClick="agregarAlCarrito(${data.id_productos}, '${data.nombre}', '${data.nom_archivo}', ${data.precio_venta})">Añadir al Carrito</button>
+                            
                         </div>
                           `;
             $("#bodyDetalleProducto").html(contenido)
@@ -62,7 +66,57 @@ function verDetalleProducto(id_producto) {
     });
 }
 
+function agregarAlCarrito(id_productos, nombre, imagen, precio) {
+    let cantidad = $("#cantidad").val()                      // se toma el valor del input cantidad
+    let subtotal = cantidad * precio;
+    let producto = {                                         //creamos un objeto para crear carrito
+        "id_producto": id_productos,
+        "nombre": nombre,
+        "imagen": imagen,
+        "precio": precio,
+        "cantidad": parseInt(cantidad),
+        "subtotal": subtotal
 
+    }
+
+    let carrito = []                                         //creamos un array donde mandamos al locaStorage
+    let carritoStorage = localStorage.getItem("carrito")     //Traemos el carrito si es que existe
+    if (carritoStorage != null) {
+        carrito = JSON.parse(carritoStorage);                //Si existe el carrito transformamops a JSON el carrito..
+
+        // se recorre la variable carrito
+        carrito.map(function (element, index) {
+            if (element.id_producto == id_productos) {
+                let cantidadNueva = producto["cantidad"] + parseInt(element.cantidad);
+                //Tomamos la cantidad del input y sumamos a la que ya tenia    
+                producto["cantidad"] = cantidadNueva;
+                producto["subtotal"] = cantidadNueva * precio;
+                // eliminamos el producto del carrito
+                carrito.splice(index, 1)
+            }
+        });
+    }
+    carrito.push(producto)                                   //Hacemos el push(añadimos) producto que creamos anteriormente
+    localStorage.setItem("carrito", JSON.stringify(carrito)) //Aca mandamos al LocalStorage al carrito
+
+    actualizarCantidadCarrito();
+    $("#detalleProductoModal").modal("hide")
+    alert(`Se añadieron (${cantidad}) ${nombre} al carrito!`)
+
+}
+
+function actualizarCantidadCarrito() {
+    let carritoStorage = localStorage.getItem("carrito")     //Traemos el carrito si es que existe
+    let cantidadTotal = 0;
+    if (carritoStorage != null) {
+        carrito = JSON.parse(carritoStorage);                //Si existe el carrito transformamops a JSON el carrito..
+
+        carrito.map(function (element, index) {
+            cantidadTotal += element.cantidad;
+        });
+    }
+    $("#cantidadCarrito").text(cantidadTotal)
+}
 
 function traerCategorias() {
     $.ajax({
