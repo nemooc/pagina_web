@@ -1,5 +1,4 @@
 <?php
-header("Content-type: image/jpeg");
 require '../config/connection.php';
 
 class Producto

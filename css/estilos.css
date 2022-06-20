@@ -2,9 +2,11 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-  
   margin: 0;
 }
 .img_logo {
@@ -613,7 +615,8 @@ footer .contenedor-redes i:hover {
 .navbar-collapse:after,
 .pager:before,
 .pager:after,
-.panel-body:before, .panel-body:after,
+.panel-body:before,
+.panel-body:after,
 .modal-footer:before,
 .modal-footer:after {
   content: " ";
@@ -659,10 +662,45 @@ footer .contenedor-redes i:hover {
   justify-content: end;
   padding: 20px;
 }
-.texto_carrito{
+.texto_carrito {
   font-family: "Arvo", serif;
   font-family: "Mukta", sans-serif;
   font-family: "Pacifico", cursive;
   font-family: "Teko", sans-serif;
   font-size: 2em;
+}
+
+.user-imag2 {
+  margin-top: -50px;
+  margin-bottom: 35px;
+}
+.user-imag2 img {
+  width: 100px;
+  height: 100px;
+  box-shadow: 0px 0px 4px #f5e6ca;
+  border-radius: 50%;
+}
+
+@media (min-width: 576px) {
+  .divSesion {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+}
+
+.divSesion {
+  position: relative;
+  width: auto;
+}
+
+.main-section2 {
+  margin: 0 auto;
+  margin-top: 25%;
+  padding: 0;
+}
+.modal-content2 {
+  background-color: rgb(207, 169, 112);
+  opacity: 0.95;
+  padding: 0 20px;
+  box-shadow: 0px 0px 4px #f5e6ca;
 }

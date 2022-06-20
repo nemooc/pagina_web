@@ -45,21 +45,7 @@ function verDetalleProducto(id_producto) {
         data: { id: id_producto },
         success: function (data) {
             data = JSON.parse(data)
-            let contenido = `
-                        <div class="col-12 col-lg-4">
-                                    <div style="height:200px;background-content:center;background-size:cover;background-image: url(../Imagenes_Cocinas/${data.nom_archivo});"> 
-                                    </div>
-                        </div>
-                        <div class="col-8 col-lg-8">
-                            <h2>${data.nombre}</h2>
-                            <p>${data.detalles}</p>
-                            <h4>$${data.precio_venta}</h4>
-                            <input type="number" class="form-control" id="cantidad">
-                            <button type="button" class="btn btn-info" onClick="agregarAlCarrito(${data.id_productos}, '${data.nombre}', '${data.nom_archivo}', ${data.precio_venta})">Añadir al Carrito</button>
-                            
-                        </div>
-                          `;
-            $("#bodyDetalleProducto").html(contenido)
+            $("#bodyDetalleProducto").html(data)
             $("#detalleProductoModal").modal('show')
 
         }

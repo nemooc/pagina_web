@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,13 +31,13 @@
             <div class="main">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link active color_letra" href="../index.html">Inicio</a>
+                        <a class="nav-link active color_letra" href="../">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra" href="./productos.html">Productos</a>
+                        <a class="nav-link color_letra" href="./productos.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra" href="./quienes_somos.html">Quienes somos</a>
+                        <a class="nav-link color_letra" href="./quienes_somos.php">Quienes somos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color_letra">Contacto</a>
@@ -44,10 +45,21 @@
                 </ul>
             </div>
             <div class="sesion_y_carrito">
+                <?php if (isset($_SESSION['id_usuario_web'])) { ?>
+                <!-- Cuando estoy logueado -->
+                <div>
+                    <span>Bienvenido <?php echo $_SESSION['usuario'] ?></span>
+                    <button type='button' onclick="cerrar_sesion()">Cerrar sesion</button>
+                    <a href="vistas/carrito_de_compra.php"><i class="fa-solid fa-cart-shopping"></i></a><span
+                        class="ml-2" style="font-size: 20px; font-weight: bold;" id="cantidadCarrito"></span>
+                </div>
+
+                <?php }else{ ?>
+
+                <!-- Cuando no estoy logueado -->
                 <a href="" style="margin-right: 20px;"><i class="far fa-user"></i></a>
 
-                <a href="carrito_de_compra.html"><i class="fa-solid fa-cart-shopping"></i></a><span class="ml-2"
-                    style="font-size: 20px; font-weight: bold;" id="cantidadCarrito"></span>
+                <?php }?>
             </div>
         </div>
     </header>
@@ -126,13 +138,14 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
-        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
-        crossorigin="anonymous"></script>
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
 
     <script src="../js/producto.js"></script>
+    <script src="../js/sesion.js"></script>
 
 </body>
 
