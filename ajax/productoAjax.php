@@ -46,7 +46,7 @@ switch ($_GET['op']) {
             if (isset($_SESSION['id_usuario_web'])){
                 $botonCarrito = "
                 <input type='number' class='form-control' id='cantidad'>
-                <button type='button' class='btn btn-info' onClick='agregarAlCarrito(".$respuesta['id_productos'].", '".$respuesta['nombre']."', '".$respuesta['nom_archivo']."' , ".$respuesta['precio_venta'].")'>Añadir al Carrito</button>
+                <button type='button' class='btn btn-info' onClick='agregarAlCarrito(".$respuesta['id_productos'].", \"".$respuesta['nombre']."\", \"".$respuesta['nom_archivo']."\", ".$respuesta['precio_venta'].")'>Añadir al Carrito</button>
                 ";
             }
 
