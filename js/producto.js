@@ -62,14 +62,11 @@ function agregarAlCarrito(id_productos, nombre, imagen, precio) {
         "precio": precio,
         "cantidad": parseInt(cantidad),
         "subtotal": subtotal
-
     }
-
     let carrito = []                                         //creamos un array donde mandamos al locaStorage
     let carritoStorage = localStorage.getItem("carrito")     //Traemos el carrito si es que existe
     if (carritoStorage != null) {
         carrito = JSON.parse(carritoStorage);                //Si existe el carrito transformamops a JSON el carrito..
-
         // se recorre la variable carrito
         carrito.map(function (element, index) {
             if (element.id_producto == id_productos) {
@@ -88,22 +85,18 @@ function agregarAlCarrito(id_productos, nombre, imagen, precio) {
     actualizarCantidadCarrito();
     $("#detalleProductoModal").modal("hide")
     alert(`Se añadieron (${cantidad}) ${nombre} al carrito!`)
-
 }
-
 function actualizarCantidadCarrito() {
     let carritoStorage = localStorage.getItem("carrito")     //Traemos el carrito si es que existe
     let cantidadTotal = 0;
     if (carritoStorage != null) {
         carrito = JSON.parse(carritoStorage);                //Si existe el carrito transformamops a JSON el carrito..
-
         carrito.map(function (element, index) {
             cantidadTotal += element.cantidad;
         });
     }
     $("#cantidadCarrito").text(cantidadTotal)
 }
-
 function traerCategorias() {
     $.ajax({
         url: '../ajax/productoAjax.php?op=traerCategoria',
@@ -130,11 +123,7 @@ function traerCategorias() {
         }
 
     });
-
-
 }
-
-
 function verCategoria(categoria) {
     traerProductos(categoria)
     $("#categoria").text(categoria)

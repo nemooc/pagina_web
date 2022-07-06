@@ -38,6 +38,9 @@ body {
 }
 .sesion_y_carrito {
   margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  
 }
 
 #crecimiento img {

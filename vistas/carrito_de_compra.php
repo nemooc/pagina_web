@@ -45,11 +45,21 @@
                 </ul>
             </div>
             <div class="sesion_y_carrito">
+
                 <?php if (isset($_SESSION['id_usuario_web'])) { ?>
                 <!-- Cuando estoy logueado -->
-                <div>
-                    <span>Bienvenido <?php echo $_SESSION['usuario'] ?></span>
-                    <button type='button' onclick="cerrar_sesion()">Cerrar sesion</button>
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-expanded="false">
+                        <?php echo $_SESSION['usuario'] ?>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Mis pedidos</a>
+                        <a class="dropdown-item" href="#" onclick="cerrar_sesion()">Cerrar Sesion</a>
+
+                    </div>
+                </div>
+                <div class="ml-3">
                     <a href="vistas/carrito_de_compra.php"><i class="fa-solid fa-cart-shopping"></i></a><span
                         class="ml-2" style="font-size: 20px; font-weight: bold;" id="cantidadCarrito"></span>
                 </div>
@@ -57,7 +67,7 @@
                 <?php }else{ ?>
 
                 <!-- Cuando no estoy logueado -->
-                <a href="" style="margin-right: 20px;"><i class="far fa-user"></i></a>
+                <a href="../vistas/login.php" style="margin-right: 20px;"><i class="far fa-user"></i></a>
 
                 <?php }?>
             </div>
@@ -153,6 +163,7 @@
     </script>
 
     <script src="../js/carrito_de_compra.js"></script>
+    <script src="../js/sesion.js"></script>
 
 
 
