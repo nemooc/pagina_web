@@ -60,8 +60,8 @@
                     </div>
                 </div>
                 <div class="ml-3">
-                    <a href="vistas/carrito_de_compra.php"><i class="fa-solid fa-cart-shopping"></i></a><span
-                        class="ml-2" style="font-size: 20px; font-weight: bold;" id="cantidadCarrito"></span>
+                    <a href="carrito_de_compra.php"><i class="fa-solid fa-cart-shopping"></i></a><span class="ml-2"
+                        style="font-size: 20px; font-weight: bold;" id="cantidadCarrito"></span>
                 </div>
 
                 <?php }else{ ?>
@@ -78,27 +78,8 @@
         <p class="text-4x1 texto_carrito">
             Mi Carrito
         </p>
-        <div class="row">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">imagen</th>
-                        <th scope="col">Precio</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col">Subtotal</th>
-                        <th scope="col">Acción</th>
-                    </tr>
-                </thead>
-                <tbody id="datosCarrito">
+        <div id="divCarrito">
 
-                </tbody>
-            </table>
-            <div class="col-12 boton_carrito"><span id="montoTotalCarrito"></span></div>
-            <div class="col-12 boton_carrito">
-                <button type="button" class="btn btn-success">Terminar Compra</button>
-            </div>
         </div>
 
     </div>

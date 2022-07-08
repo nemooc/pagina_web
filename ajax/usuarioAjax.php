@@ -12,6 +12,7 @@ switch ($_GET['op']) {
         if (isset($respuesta)) {
             $_SESSION['id_usuario_web'] = $respuesta['id_usuario_web'];
             $_SESSION['usuario'] =  $respuesta['usuario'];
+            $_SESSION['dni_clientes'] =  $respuesta['dni_clientes'];
         }
         echo json_encode($respuesta);
         break;
@@ -20,4 +21,6 @@ switch ($_GET['op']) {
         session_unset();
         session_destroy();
         break;
-}
+
+
+    }
