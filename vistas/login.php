@@ -68,6 +68,8 @@
 
                 <!-- Cuando no estoy logueado -->
                 <a href="../vistas/login.php" style="margin-right: 20px;"><i class="far fa-user"></i></a>
+                <a href="../vistas/registrarse.php" style="margin-right: 20px; text-decoration:none;"
+                    class="">REGISTRARSE</a>
 
                 <?php }?>
             </div>

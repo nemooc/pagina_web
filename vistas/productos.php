@@ -68,6 +68,8 @@
 
                 <!-- Cuando no estoy logueado -->
                 <a href="../vistas/login.php" style="margin-right: 20px;"><i class="far fa-user"></i></a>
+                <a href="../vistas/registrarse.php" style="margin-right: 20px; text-decoration:none;"
+                    class="">REGISTRARSE</a>
 
                 <?php }?>
             </div>
@@ -91,7 +93,7 @@
                 <div class="row mt-5">
                     <div class="col-12 col-lg-3 ">
                         <h3>CATEGORIAS</h3>
-                        <div id="listadoCategoria">
+                        <div id="listadoCategoria" class="letrasCategoria">
                             <!-- Aca iran mis categorias montado en js -->
 
                         </div>

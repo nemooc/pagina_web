@@ -30,6 +30,18 @@ body {
   font-family: "Teko", sans-serif;
   font-size: 2em;
 }
+.letrasCategoria ul a {
+  color:black;
+  font-size: 1.6em; 
+  font-family: "Arvo", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Pacifico", cursive;
+  font-family: "Teko", sans-serif;
+}
+.letrasCategoria ul a:hover {
+  color:black;
+  font-size: 1.7em; 
+}
 .color_letra {
   color: rgb(60, 60, 63);
 }

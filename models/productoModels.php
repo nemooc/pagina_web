@@ -29,7 +29,7 @@ class Producto
     }
 
     public static function traer_Producto ($id){
-    $sql = "SELECT p.id_productos,p.nombre,p.precio_venta,i.nom_archivo,p.detalles from productos p LEFT JOIN imagenes i on p.id_imagen = i.id
+    $sql = "SELECT p.id_productos,p.nombre,p.precio_venta,p.stock_actual,i.nom_archivo,p.detalles from productos p LEFT JOIN imagenes i on p.id_imagen = i.id
     where p.id_productos = '$id'";
     return ejecutarConsultaSimpleFila($sql);
 

@@ -58,6 +58,7 @@ switch ($_GET['op']) {
             <div class='col-8 col-lg-8'>
                 <h2>".$respuesta['nombre']."</h2>
                 <p>".$respuesta['detalles']."</p>
+                <h5>Stock ".$respuesta['stock_actual']."</5h>
                 <h4>$".$respuesta['precio_venta']."</h4>
                 <div>
                 ".$botonCarrito."
