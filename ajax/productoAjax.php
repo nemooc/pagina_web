@@ -42,12 +42,18 @@ switch ($_GET['op']) {
         if (isset($respuesta)) {
             session_start();
             $botonCarrito = "Inicie sesion para añadir al carrito";
+            $stockActual = "Stock ".$respuesta['stock_actual'];
             // compruebo si tengo un usuario logueado
             if (isset($_SESSION['id_usuario_web'])){
-                $botonCarrito = "
-                <input type='number' class='form-control' id='cantidad'>
-                <button type='button' class='btn btn-info' onClick='agregarAlCarrito(".$respuesta['id_productos'].", \"".$respuesta['nombre']."\", \"".$respuesta['nom_archivo']."\", ".$respuesta['precio_venta'].")'>Añadir al Carrito</button>
-                ";
+                if ($respuesta['stock_actual'] > 0 ) {
+                    $botonCarrito = "
+                    <input type='number' class='form-control' id='cantidad'>
+                    <button type='button' class='btn btn-info mt-3' onClick='agregarAlCarrito(".$respuesta['id_productos'].", \"".$respuesta['nombre']."\", \"".$respuesta['nom_archivo']."\", ".$respuesta['precio_venta'].", ".$respuesta['stock_actual'].")'>Añadir al Carrito</button>
+                    ";
+                }else{
+                    $botonCarrito = "";
+                    $stockActual="Sin Stock";
+                }
             }
 
             $html = "
@@ -58,7 +64,7 @@ switch ($_GET['op']) {
             <div class='col-8 col-lg-8'>
                 <h2>".$respuesta['nombre']."</h2>
                 <p>".$respuesta['detalles']."</p>
-                <h5>Stock ".$respuesta['stock_actual']."</5h>
+                <h5>".$stockActual."</5h>
                 <h4>$".$respuesta['precio_venta']."</h4>
                 <div>
                 ".$botonCarrito."

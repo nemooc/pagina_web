@@ -52,39 +52,47 @@ function verDetalleProducto(id_producto) {
     });
 }
 
-function agregarAlCarrito(id_productos, nombre, imagen, precio) {
+function agregarAlCarrito(id_productos, nombre, imagen, precio, stock_actual) {
     let cantidad = $("#cantidad").val()                      // se toma el valor del input cantidad
-    let subtotal = cantidad * precio;
-    let producto = {                                         //creamos un objeto para crear carrito
-        "id_producto": id_productos,
-        "nombre": nombre,
-        "imagen": imagen,
-        "precio": precio,
-        "cantidad": parseInt(cantidad),
-        "subtotal": subtotal
-    }
-    let carrito = []                                         //creamos un array donde mandamos al locaStorage
-    let carritoStorage = localStorage.getItem("carrito")     //Traemos el carrito si es que existe
-    if (carritoStorage != null) {
-        carrito = JSON.parse(carritoStorage);                //Si existe el carrito transformamops a JSON el carrito..
-        // se recorre la variable carrito
-        carrito.map(function (element, index) {
-            if (element.id_producto == id_productos) {
-                let cantidadNueva = producto["cantidad"] + parseInt(element.cantidad);
-                //Tomamos la cantidad del input y sumamos a la que ya tenia    
-                producto["cantidad"] = cantidadNueva;
-                producto["subtotal"] = cantidadNueva * precio;
-                // eliminamos el producto del carrito
-                carrito.splice(index, 1)
-            }
-        });
-    }
-    carrito.push(producto)                                   //Hacemos el push(añadimos) producto que creamos anteriormente
-    localStorage.setItem("carrito", JSON.stringify(carrito)) //Aca mandamos al LocalStorage al carrito
 
-    actualizarCantidadCarrito();
-    $("#detalleProductoModal").modal("hide")
-    alert(`Se añadieron (${cantidad}) ${nombre} al carrito!`)
+    // controlamos que la cantidad ingresada no sobrepase el stock actual
+    if (cantidad > stock_actual) {
+        alert("Cantidad supera el Stock Actual");
+    } else {
+        let subtotal = cantidad * precio;
+        let producto = {                                         //creamos un objeto para crear carrito
+            "id_producto": id_productos,
+            "nombre": nombre,
+            "imagen": imagen,
+            "precio": precio,
+            "cantidad": parseInt(cantidad),
+            "subtotal": subtotal
+        }
+        let carrito = []                                         //creamos un array donde mandamos al locaStorage
+        let carritoStorage = localStorage.getItem("carrito")     //Traemos el carrito si es que existe
+        if (carritoStorage != null) {
+            carrito = JSON.parse(carritoStorage);                //Si existe el carrito transformamops a JSON el carrito..
+            // se recorre la variable carrito
+            carrito.map(function (element, index) {
+                if (element.id_producto == id_productos) {
+                    let cantidadNueva = producto["cantidad"] + parseInt(element.cantidad);
+                    //Tomamos la cantidad del input y sumamos a la que ya tenia    
+                    producto["cantidad"] = cantidadNueva;
+                    producto["subtotal"] = cantidadNueva * precio;
+                    // eliminamos el producto del carrito
+                    carrito.splice(index, 1)
+                }
+            });
+        }
+        carrito.push(producto)                                   //Hacemos el push(añadimos) producto que creamos anteriormente
+        localStorage.setItem("carrito", JSON.stringify(carrito)) //Aca mandamos al LocalStorage al carrito
+
+        actualizarCantidadCarrito();
+        $("#detalleProductoModal").modal("hide")
+        alert(`Se añadieron (${cantidad}) ${nombre} al carrito!`)
+    }
+
+
 }
 function actualizarCantidadCarrito() {
     let carritoStorage = localStorage.getItem("carrito")     //Traemos el carrito si es que existe
