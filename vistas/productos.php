@@ -54,7 +54,7 @@
                         <?php echo $_SESSION['usuario'] ?>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Mis pedidos</a>
+                        <a class="dropdown-item" href="mis_pedidos.php">Mis pedidos</a>
                         <a class="dropdown-item" href="#" onclick="cerrar_sesion()">Cerrar Sesion</a>
 
                     </div>

@@ -15,7 +15,7 @@ class Ventas
         $dni = $_SESSION['dni_clientes'];
         $fecha = date('Y-m-d');
         // Creamos venta
-        $sql = "INSERT INTO ventas (total_venta, dni, fecha, tipo_venta, tipo_de_factura, estado) values ($total_venta,$dni,'$fecha','WEB','B','PENDIENTE')";
+        $sql = "INSERT INTO ventas (total_venta, dni, fecha, tipo_venta, tipo_de_factura, estado,estado_seguimiento) values ($total_venta,$dni,'$fecha','WEB','B','PENDIENTE','-')";
         $idVenta = ejecutarConsulta_retornarID($sql);
 
         
@@ -34,7 +34,11 @@ class Ventas
 
     }
 
-
-
-    
+    public static function mostrarMisPedidos (){
+        $dni = $_SESSION['dni_clientes'];
+        $sql = "SELECT * from ventas  where dni = $dni and tipo_venta = 'WEB' order by numero_venta desc";
+      return ejecutarConsulta($sql);
+        
+        }
+        
 }

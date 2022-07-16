@@ -34,5 +34,8 @@ class Producto
     return ejecutarConsultaSimpleFila($sql);
 
     }
+
+   
+
     
 }

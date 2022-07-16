@@ -26,5 +26,23 @@ switch ($_GET['op']) {
     break;
 
 
+    case "mostrarMisPedidos":
+        $respuesta = Ventas::mostrarMisPedidos();
+        $data = array();
 
+        while ($reg = $respuesta->fetch_object()){
+
+            $data[] = array( 
+                "numero_venta" => $reg->numero_venta,
+                "total_venta" => $reg->total_venta,   
+                "dni" => $reg->dni,
+                "fecha" => $reg->fecha,
+                "estado" => $reg->estado,
+                "estado_seguimiento" => $reg->estado_seguimiento,
+                
+            );
+        }
+        echo json_encode($data);
+    break;
+    
 }

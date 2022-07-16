@@ -34,10 +34,10 @@
                         <a class="nav-link active color_letra" href="../">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra" href="vistas/productos.php">Productos</a>
+                        <a class="nav-link color_letra" href="./productos.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra" href="vistas/quienes_somos.php">Quienes somos</a>
+                        <a class="nav-link color_letra" href="./quienes_somos.php">Quienes somos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color_letra">Contacto</a>

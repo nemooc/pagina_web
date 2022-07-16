@@ -684,7 +684,13 @@ footer .contenedor-redes i:hover {
   font-family: "Teko", sans-serif;
   font-size: 2em;
 }
-
+.texto_pedido{
+  font-family: "Arvo", serif;
+  font-family: "Mukta", sans-serif;
+  font-family: "Pacifico", cursive;
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+}
 .user-imag2 {
   margin-top: -50px;
   margin-bottom: 35px;
