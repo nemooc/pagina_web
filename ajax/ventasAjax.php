@@ -44,5 +44,24 @@ switch ($_GET['op']) {
         }
         echo json_encode($data);
     break;
+
+
+    case "mostrarDetallesCompra":
+        $numeroVenta = isset($_GET['numeroVenta']) ? limpiarCadena($_GET['numeroVenta']) : "";
+        $respuesta = Ventas::mostrarDetallesCompra($numeroVenta);
+        $data = array();
+        while ($reg = $respuesta->fetch_object()){
+
+            $data[] = array( 
+                "codigo" => $reg->codigo,
+                "nombre" => $reg->nombre,   
+                "precio_venta" => $reg->precio_venta,
+                "cantidad" => $reg->cantidad,
+                "subtotal" => $reg->subtotal,
+
+            );
+        }
+        echo json_encode($data);
+    break;
     
 }

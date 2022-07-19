@@ -58,7 +58,7 @@ function mostrarMisPedidos() {
                                     <td>${element.fecha}</td>
                                     <td>${estadoPago}</td>
                                     <td><strong>${element.estado_seguimiento}</strong></td>
-                                    <td><button class="btn btn-primary">Ver Detalles Compra</button></td>
+                                    <td><button class="btn btn-primary" OnClick="mostrarDetallesCompra(${element.numero_venta})">Ver Detalles Compra</button></td>
                                 </tr>
                             
                 `;
@@ -73,7 +73,50 @@ function mostrarMisPedidos() {
     });
 }
 
+function mostrarDetallesCompra(numero_Venta) {
 
+    $.ajax({
+        url: '../ajax/ventasAjax.php?op=mostrarDetallesCompra',
+        data: { numeroVenta: numero_Venta },
+
+        success: function (data) {
+            let resultados = JSON.parse(data)
+            let mostrar = `<div class="col-12">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Codigo</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Precio Venta</th>
+                                            <th scope="col">Cantidad</th>
+                                            <th scope="col">Subtotal</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                `;
+            resultados.forEach(element => {
+                mostrar += `<tr>
+                                        <td>${element.codigo}</td>
+                                        <td>${element.nombre}</td>
+                                        <td>$${element.precio_venta}</td>
+                                        <td>${element.cantidad}</td>
+                                        <td>$${element.subtotal}</td>
+                                </tr>`
+            });
+
+            mostrar += `</tbody>
+                    </table>
+                    </div>
+                `;
+
+            $("#bodyMostrarDetallesCompra").html(mostrar)
+            $("#mostrarDetallesCompra").modal("show")
+
+        }
+
+    });
+}
 
 
 init();

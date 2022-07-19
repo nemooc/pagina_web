@@ -18,11 +18,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Productos</title>
+    <title>Quienes Somos</title>
 </head>
 
 <body>
-
     <header>
         <div class="container-fluid menu_nav">
             <div class="logo">
@@ -37,7 +36,7 @@
                         <a class="nav-link color_letra" href="./productos.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra" href="./quienes_somos.php">Quienes somos</a>
+                        <a class="nav-link color_letra" href="quienes_somos.php">Quienes somos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link color_letra">Contacto</a>
@@ -54,14 +53,14 @@
                         <?php echo $_SESSION['usuario'] ?>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Mis pedidos</a>
+                        <a class="dropdown-item" href="./mis_pedidos.php">Mis pedidos</a>
                         <a class="dropdown-item" href="#" onclick="cerrar_sesion()">Cerrar Sesion</a>
 
                     </div>
                 </div>
                 <div class="ml-3">
-                    <a href="carrito_de_compra.php"><i class="fa-solid fa-cart-shopping"></i></a><span class="ml-2"
-                        style="font-size: 20px; font-weight: bold;" id="cantidadCarrito"></span>
+                    <a href="../vistas/carrito_de_compra.php"><i class="fa-solid fa-cart-shopping"></i></a><span
+                        class="ml-2" style="font-size: 20px; font-weight: bold;" id="cantidadCarrito"></span>
                 </div>
 
                 <?php }else{ ?>
@@ -76,96 +75,20 @@
         </div>
     </header>
 
-    <div class="container-md mt-5">
-        <p class="text-4x1 texto_pedido">
-            Mis Pedidos
-        </p>
-        <div id="divMisPedidos">
-            <!-- <div class="row">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">Numero de Venta</th>
-                            <th scope="col">Total Venta</th>
-                            <th scope="col">DNI</th>
-                            <th scope="col">Fecha</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>234234</td>
-                            <td>234234</td>
-                            <td>wd234</td>
-                            <td>23432</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div> -->
-        </div>
-
-    </div>
-
-
-
-
-
-    <div class="modal fade" id="mostrarDetallesCompra" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Detalles de la Compra</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row" id="bodyMostrarDetallesCompra">
-                        <!-- <div class="col-12">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Codigo</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Precio Venta</th>
-                                        <th scope="col">Cantidad</th>
-                                        <th scope="col">Subtotal</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>234234</td>
-                                        <td>234234</td>
-                                        <td>wd234</td>
-                                        <td>23432</td>
-                                        <td>2asddas</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div> -->
-                    </div>
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
     <div class="fila home_row">
         <div id="content" class="col-sm-12">
             <div id="crecimiento">
+
+
+                <section class="sectionTituloPagina">
+                    <h1 class="animate__animated  animate__fadeInDown">Quienes Somos</h1>
+                </section>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.913724220038!2d-55.909055884400715!3d-27.37840971938256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457be46bf1a3197%3A0xc67db47b33f1198f!2sAv.%20Gral.%20Lavalle%203198%2C%20N3300OOZ%20Posadas%2C%20Misiones!5e0!3m2!1ses-419!2sar!4v1658183188169!5m2!1ses-419!2sar"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
 
 
 
@@ -195,11 +118,9 @@
                         <div class="text-info" id="text-info">
                             <p>Las imágenes y descripciones técnicas del catálogo de productos son de carácter
                                 ilustrativas e informativas, no contractuales.</p>
-                            <p>Todos los artefactos a gas deben ser instalados y regulada su gasificación por un
-                                gasista
+                            <p>Todos los artefactos a gas deben ser instalados y regulada su gasificación por un gasista
                                 matriculado, en el lugar de trabajo.</p>
-                            <p>La empresa se reserva el derecho de efectuar modificaciones en el diseño de los
-                                productos
+                            <p>La empresa se reserva el derecho de efectuar modificaciones en el diseño de los productos
                                 sin previo aviso. ARTEFACTOS PARA USO COMERCIAL SOLAMENTE.</p>
                         </div>
                     </div>
@@ -210,25 +131,17 @@
         </div>
     </div>
 
-
-
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
-
-    <script src="../js/mostrar_mis_pedidos.js"></script>
+    <script src="../js/quienes_somos.js"></script>
     <script src="../js/sesion.js"></script>
 
-
-
-
-
-
 </body>
+
+</html>

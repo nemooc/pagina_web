@@ -40,5 +40,14 @@ class Ventas
       return ejecutarConsulta($sql);
         
         }
+
+        public static function mostrarDetallesCompra ($id){
+            
+            $sql = "SELECT * FROM detalles_ventas WHERE numero_venta = $id";
+            return ejecutarConsulta($sql);
+          
+            }
         
+    
+            
 }
