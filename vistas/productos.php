@@ -125,7 +125,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="row" id="bodyDetalleProducto">
-                    
+
                     </div>
 
 
@@ -155,6 +155,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="../js/producto.js"></script>
     <script src="../js/sesion.js"></script>

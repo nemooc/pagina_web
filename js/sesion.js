@@ -25,7 +25,11 @@ function iniciar_sesion(accion_del_boton) {
             if (data != "null") {
                 $(location).attr("href", baseUrl);
             } else {
-                alert("Usuario o clave incorrectos!")
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Usuario y clave incorrectos',
+                    icon: 'error',
+                })
             }
         }
     });

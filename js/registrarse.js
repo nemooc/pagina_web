@@ -14,8 +14,15 @@ $("#formRegistro").on("submit", function (event) {
 
             if (data.status) {
                 window.location = "../vistas/login.php"
+            } else {
+                Swal.fire({
+                    title: 'DCREPRESENTACION',
+                    text: data.message,
+                    icon: 'error',
+                })
             }
-            alert(data.message);
+
+
         }
 
     });

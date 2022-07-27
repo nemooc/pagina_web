@@ -57,7 +57,12 @@ function agregarAlCarrito(id_productos, nombre, imagen, precio, stock_actual) {
 
     // controlamos que la cantidad ingresada no sobrepase el stock actual
     if (cantidad > stock_actual) {
-        alert("Cantidad supera el Stock Actual");
+        Swal.fire({
+            title: 'Advertencia',
+            text: "Cantidad supera el Stock Actual",
+            icon: 'warning',
+        })
+
     } else {
         let subtotal = cantidad * precio;
         let producto = {                                         //creamos un objeto para crear carrito
@@ -89,7 +94,13 @@ function agregarAlCarrito(id_productos, nombre, imagen, precio, stock_actual) {
 
         actualizarCantidadCarrito();
         $("#detalleProductoModal").modal("hide")
-        alert(`Se añadieron (${cantidad}) ${nombre} al carrito!`)
+        Swal.fire({
+            title: 'Producto agregado!',
+            text: `Se añadieron (${cantidad}) ${nombre} al carrito!`,
+            icon: 'success',
+        })
+
+
     }
 
 

@@ -134,8 +134,20 @@ function terminarCompra() {
                 localStorage.removeItem('carrito');
                 traerDatosCarrito();
                 actualizarCantidadYTotalCarrito();
+                Swal.fire({
+                    title: 'DCREPRESENTACION',
+                    text: data.message,
+                    icon: 'success',
+                })
+            } else {
+                Swal.fire({
+                    title: 'DCREPRESENTACION',
+                    text: data.message,
+                    icon: 'error',
+                })
             }
-            alert(data.message);
+
+
         }
 
     });
