@@ -40,7 +40,7 @@
                         <a class="nav-link color_letra" href="./quienes_somos.php">Quienes somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra">Contacto</a>
+                        <a class="nav-link color_letra" href="./contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -81,28 +81,7 @@
             Mis Pedidos
         </p>
         <div id="divMisPedidos">
-            <!-- <div class="row">
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">Numero de Venta</th>
-                            <th scope="col">Total Venta</th>
-                            <th scope="col">DNI</th>
-                            <th scope="col">Fecha</th>
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>234234</td>
-                            <td>234234</td>
-                            <td>wd234</td>
-                            <td>23432</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div> -->
         </div>
 
     </div>
@@ -123,30 +102,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="row" id="bodyMostrarDetallesCompra">
-                        <!-- <div class="col-12">
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Codigo</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Precio Venta</th>
-                                        <th scope="col">Cantidad</th>
-                                        <th scope="col">Subtotal</th>
 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>234234</td>
-                                        <td>234234</td>
-                                        <td>wd234</td>
-                                        <td>23432</td>
-                                        <td>2asddas</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div> -->
                     </div>
 
 
@@ -172,10 +128,20 @@
                 <footer>
                     <div class="container">
                         <div class="contenedor-links">
-                            <a href="/index.php?route=product/category&path=35">Inicio</a>
-                            <a href="/index.php?route=information/information&information_id=7">Productos</a>
-                            <a href="/index.php?route=information/information&information_id=8">Quienes Somos</a>
-                            <a href="/index.php?route=information/consulta">Contacto</a>
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item">
+                                    <a class="nav-link active color_letra" href="../">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="./productos.php">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="./quienes_somos.php">Quienes somos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="./contacto.php">Contacto</a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="contenedor-redes">
                             <div class="ubicacion">

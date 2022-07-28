@@ -40,7 +40,7 @@
                         <a class="nav-link color_letra" href="vistas/quienes_somos.php">Quienes somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra">Contacto</a>
+                        <a class="nav-link color_letra" href="vistas/contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -204,10 +204,10 @@
                 <footer>
                     <div class="container">
                         <div class="contenedor-links">
-                            <a href="/index.php?route=product/category&path=35">Inicio</a>
-                            <a href="/index.php?route=information/information&information_id=7">Productos</a>
-                            <a href="/index.php?route=information/information&information_id=8">Quienes Somos</a>
-                            <a href="/index.php?route=information/consulta">Contacto</a>
+                            <a href="index.php">Inicio</a>
+                            <a href="vistas/productos.php">Productos</a>
+                            <a href="vistas/quienes_somos.php">Quienes Somos</a>
+                            <a href="vistas/contacto.php">Contacto</a>
                         </div>
                         <div class="contenedor-redes">
                             <div class="ubicacion">

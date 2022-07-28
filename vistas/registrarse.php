@@ -40,7 +40,7 @@
                         <a class="nav-link color_letra" href="./quienes_somos.php">Quienes somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra">Contacto</a>
+                        <a class="nav-link color_letra" href="./contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -127,10 +127,20 @@
                 <footer>
                     <div class="container">
                         <div class="contenedor-links">
-                            <a href="/index.php?route=product/category&path=35">Inicio</a>
-                            <a href="/index.php?route=information/information&information_id=7">Productos</a>
-                            <a href="/index.php?route=information/information&information_id=8">Quienes Somos</a>
-                            <a href="/index.php?route=information/consulta">Contacto</a>
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item">
+                                    <a class="nav-link active color_letra" href="../">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="./productos.php">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="./quienes_somos.php">Quienes somos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="./contacto.php">Contacto</a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="contenedor-redes">
                             <div class="ubicacion">
@@ -172,6 +182,7 @@
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script src="../js/sesion.js"></script>
     <script src="../js/registrarse.js"></script>
 </body>

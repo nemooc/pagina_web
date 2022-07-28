@@ -39,7 +39,7 @@
                         <a class="nav-link color_letra" href="quienes_somos.php">Quienes somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra">Contacto</a>
+                        <a class="nav-link color_letra" ref="./contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -80,25 +80,93 @@
             <div id="crecimiento">
 
 
-                <section class="sectionTituloPagina">
-                    <h1 class="animate__animated  animate__fadeInDown">Quienes Somos</h1>
+                <section class="sectionContacto container-md">
+                    <div class="nuestrasSucursales">
+                        <h3 class="text-center mt-3 paragraph">Contactanos en nuestra sucursal por
+                            pedidos o
+                            consultas, a
+                            tráves de
+                            WhatsApp, Facebook
+                            o Instagram.</h3>
+
+                        <div class="row mt-4">
+                            <div class="col-12 pt-5 pb-5">
+                                <h3 class="sucursalLavalle">Sucursal Lavalle</h3>
+
+                                <div class="row mt-4">
+                                    <div class="col-12 col-lg-5 datosSucursal">
+                                        <div class="item mb-3">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <p class="mb-0">AV. Lavalle N° 4633 (Posadas - Misiones)</p>
+                                        </div>
+
+                                        <div class="item mb-3">
+                                            <a class="item wpp" href="https://wa.me/5493764121021" target="_blank">
+                                                <i class="fab fa-whatsapp"></i>
+                                                <p class="mb-0 parra">+54 3764-163358</p>
+                                            </a>
+                                        </div>
+                                        <div class="item mb-3">
+                                            <a class="item fb"
+                                                href="https://www.facebook.com/DC-Representaciones-107491700929117"
+                                                target="_blank">
+                                                <i class="fab fa-facebook"></i>
+                                                <p class="mb-0">Facebook</p>
+                                            </a>
+                                        </div>
+                                        <div class="item mb-3">
+                                            <a class="item insta" href="https://www.instagram.com/dcrepresentaciones/"
+                                                target="_blank">
+                                                <i class="fab fa-instagram"></i>
+                                                <p class="mb-0">Instagram</p>
+                                            </a>
+                                        </div>
+
+                                        <div class="item mb-3">
+                                            <i class="far fa-clock"></i>
+                                            <p class="mb-0">Lun - Sab: 08hs a 12:30hs - 16:00 a 20:00 hs</p>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="col-12 col-lg-7">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d885.6319825316458!2d-55.9087216707704!3d-27.39045470817647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457be5eabb28df3%3A0xfed18071e0a1987a!2sAv.%20Gral.%20Lavalle%204633%2C%20N3300ORP%20Posadas%2C%20Misiones!5e0!3m2!1ses-419!2sar!4v1658960677246!5m2!1ses-419!2sar"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </section>
-                <div>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3542.913724220038!2d-55.909055884400715!3d-27.37840971938256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457be46bf1a3197%3A0xc67db47b33f1198f!2sAv.%20Gral.%20Lavalle%203198%2C%20N3300OOZ%20Posadas%2C%20Misiones!5e0!3m2!1ses-419!2sar!4v1658183188169!5m2!1ses-419!2sar"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+
+
 
 
 
                 <footer>
                     <div class="container">
                         <div class="contenedor-links">
-                            <a href="/index.php?route=product/category&path=35">Inicio</a>
-                            <a href="/index.php?route=information/information&information_id=7">Productos</a>
-                            <a href="/index.php?route=information/information&information_id=8">Quienes Somos</a>
-                            <a href="/index.php?route=information/consulta">Contacto</a>
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item">
+                                    <a class="nav-link active color_letra" href="../">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="./productos.php">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="quienes_somos.php">Quienes somos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" ref="./contacto.php">Contacto</a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="contenedor-redes">
                             <div class="ubicacion">
@@ -116,11 +184,14 @@
                             </div>
                         </div>
                         <div class="text-info" id="text-info">
-                            <p>Las imágenes y descripciones técnicas del catálogo de productos son de carácter
+                            <p>Las imágenes y descripciones técnicas del catálogo de productos son de
+                                carácter
                                 ilustrativas e informativas, no contractuales.</p>
-                            <p>Todos los artefactos a gas deben ser instalados y regulada su gasificación por un gasista
+                            <p>Todos los artefactos a gas deben ser instalados y regulada su gasificación
+                                por un gasista
                                 matriculado, en el lugar de trabajo.</p>
-                            <p>La empresa se reserva el derecho de efectuar modificaciones en el diseño de los productos
+                            <p>La empresa se reserva el derecho de efectuar modificaciones en el diseño de
+                                los productos
                                 sin previo aviso. ARTEFACTOS PARA USO COMERCIAL SOLAMENTE.</p>
                         </div>
                     </div>

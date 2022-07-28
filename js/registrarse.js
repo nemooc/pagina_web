@@ -13,10 +13,15 @@ $("#formRegistro").on("submit", function (event) {
             data = JSON.parse(data);
 
             if (data.status) {
-                window.location = "../vistas/login.php"
+                window.location = "../vistas/login.php",
+                    Swal.fire({
+                        title: 'DCRepresentacion',
+                        text: data.message,
+                        icon: 'success',
+                    })
             } else {
                 Swal.fire({
-                    title: 'DCREPRESENTACION',
+                    title: 'DCRepresentacion',
                     text: data.message,
                     icon: 'error',
                 })

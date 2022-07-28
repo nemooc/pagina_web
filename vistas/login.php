@@ -34,13 +34,13 @@
                         <a class="nav-link active color_letra" href="../">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra" href="vistas/productos.php">Productos</a>
+                        <a class="nav-link color_letra" href="./productos.php">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra" href="vistas/quienes_somos.php">Quienes somos</a>
+                        <a class="nav-link color_letra" href="./quienes_somos.php">Quienes somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra">Contacto</a>
+                        <a class="nav-link color_letra" href="./contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -115,12 +115,20 @@
             <div id="crecimiento">
                 <footer>
                     <div class="container">
-                        <div class="contenedor-links">
-                            <a href="/index.php?route=product/category&path=35">Inicio</a>
-                            <a href="/index.php?route=information/information&information_id=7">Productos</a>
-                            <a href="/index.php?route=information/information&information_id=8">Quienes Somos</a>
-                            <a href="/index.php?route=information/consulta">Contacto</a>
-                        </div>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link active color_letra" href="../">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color_letra" href="./productos.php">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color_letra" href="./quienes_somos.php">Quienes somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link color_letra" href="./contacto.php">Contacto</a>
+                            </li>
+                        </ul>
                         <div class="contenedor-redes">
                             <div class="ubicacion">
                                 <h6>Centro de distribución:</h6>

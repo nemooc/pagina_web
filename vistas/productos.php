@@ -40,7 +40,7 @@
                         <a class="nav-link color_letra" href="./quienes_somos.php">Quienes somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra">Contacto</a>
+                        <a class="nav-link color_letra" href="./contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>

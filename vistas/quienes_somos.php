@@ -39,7 +39,7 @@
                         <a class="nav-link color_letra" href="quienes_somos.php">Quienes somos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link color_letra">Contacto</a>
+                        <a class="nav-link color_letra" href="contacto.php">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -85,15 +85,57 @@
                 </section>
 
 
+                <section class="quienesSomos container-md">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <h3 class="empresa">La Empresa</h3>
+                            <p>Somos una empresa de la ciudad de Posadas, y desde 2020, comercializamos y
+                                distribuimos equipamiento para gastronomía en todo el territorio misionero.
+
+                                Atentos a las tendencias del mercado gastronómico y a la creatividad e innovación de
+                                nuestros cocineros, tenemos diseños y mejoras permanentemente en cada producto, logrando
+                                la mejor relación costo-beneficio en los equipos que ofrecemos.
+
+                                Somos una empresa en crecimiento. Ofrecemos a nuestros clientes el mejor precio, calidad
+                                y asesoramiento en los
+                                más diversos productos. Comercializamos las principales marcas de renombre nacional y
+                                nos concentramos en los productos de mayor rotación para que tu negocio o reventa tenga
+                                un éxito asegurado. Actualmente disponemos de una sucursal en la ciudad de Posadas,
+                                Misiones.
+                            </p>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="imagen">
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+
+
 
 
                 <footer>
                     <div class="container">
                         <div class="contenedor-links">
-                            <a href="/index.php?route=product/category&path=35">Inicio</a>
-                            <a href="/index.php?route=information/information&information_id=7">Productos</a>
-                            <a href="/index.php?route=information/information&information_id=8">Quienes Somos</a>
-                            <a href="/index.php?route=information/consulta">Contacto</a>
+                            <ul class="nav justify-content-center">
+                                <li class="nav-item">
+                                    <a class="nav-link active color_letra" href="../">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="./productos.php">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="quienes_somos.php">Quienes somos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color_letra" href="contacto.php">Contacto</a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="contenedor-redes">
                             <div class="ubicacion">
