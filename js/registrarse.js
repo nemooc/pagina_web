@@ -10,15 +10,16 @@ $("#formRegistro").on("submit", function (event) {
         contentType: false,
         processData: false,
         success: function (data) {
-            data = JSON.parse(data);
 
+            data = JSON.parse(data);
             if (data.status) {
-                window.location = "../vistas/login.php",
-                    Swal.fire({
-                        title: 'DCRepresentacion',
-                        text: data.message,
-                        icon: 'success',
-                    })
+                Swal.fire({
+                    title: 'DCRepresentacion',
+                    text: data.message,
+                    icon: 'success',
+                }).then((result) => {
+                    window.location = "../vistas/login.php"
+                })
             } else {
                 Swal.fire({
                     title: 'DCRepresentacion',
