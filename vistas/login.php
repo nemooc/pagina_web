@@ -100,8 +100,11 @@
                         <input type="password" class="form-control" id="clave" placeholder="Contraseña" name="clave"
                             autocomplete="off">
                     </div>
+
                     <button class="btn btn-primary button" type="submit"><i class="fas fa-sign-in-alt"></i>
                         Ingresar</button>
+
+
                 </form>
 
             </div>

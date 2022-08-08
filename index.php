@@ -143,7 +143,8 @@
                         </div>
                     </div>
                     <div class="btn-contenedor">
-                        <a href="/archivo/catalogo_digital.pdf" class="btn btn-primary" target="_blank">Catálogo de
+                        <a href="https://solreal.com/archivo/catalogo_digital.pdf" class="btn btn-primary"
+                            target="_blank">Catálogo de
                             productos&nbsp;</a>
                     </div>
                 </div>

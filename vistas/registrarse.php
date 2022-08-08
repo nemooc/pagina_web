@@ -80,32 +80,30 @@
             <form id="formRegistro">
                 <div class="row mt-3 mb-3">
                     <div class="col-12 col-lg-6">
-                        <div>
-                            <label for="">Usuario</label>
-                            <input type="text" class="form-control" name="usuario" required>
-                            <label for="">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" required>
-                            <label for="">DNI</label>
-                            <input type="number" class="form-control" name="dni" required>
-                            <label for="">Provincia</label>
-                            <input type="text" class="form-control" name="provincia" required>
-                            <label for="">Email</label>
-                            <input type="email" class="form-control" name="email" required>
 
-                        </div>
-                    </div>
-                    <div class="row col-12 col-lg-6">
-
+                        <label for="">Usuario</label>
+                        <input type="text" class="form-control" name="usuario" required>
                         <label for="">Clave</label>
                         <input type="password" class="form-control" name="clave" required>
-                        <!-- <label for="">Apellido</label>
-                        <input type="text" class="form-control" name="apellido"> -->
-                        <label for="">Domicilio</label>
-                        <input type="text" class="form-control" name="domicilio" required>
+                        <label for="">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" required>
+                        <label for="">DNI</label>
+                        <input type="number" class="form-control" name="dni" required>
+                        <label for="">Provincia</label>
+                        <input type="text" class="form-control" name="provincia" required>
+
+
+
+                    </div>
+                    <div class="col-12 col-lg-6">
                         <label for="">Localidad</label>
                         <input type="text" class="form-control" name="localidad" required>
+                        <label for="">Domicilio</label>
+                        <input type="text" class="form-control" name="domicilio" required>
                         <label for="">Telefono</label>
                         <input type="text" class="form-control" name="telefono" required>
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" name="email" required>
                         <div class="col-12 boton_carrito">
                             <button type="submit" class="btn btn-primary">Enviar
                                 Datos</button>

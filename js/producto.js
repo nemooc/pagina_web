@@ -54,7 +54,8 @@ function verDetalleProducto(id_producto) {
 
 function agregarAlCarrito(id_productos, nombre, imagen, precio, stock_actual) {
     let cantidad = $("#cantidad").val()                      // se toma el valor del input cantidad
-
+    let vacio = ""
+    let cero = 0
     // controlamos que la cantidad ingresada no sobrepase el stock actual
     if (cantidad > stock_actual) {
         Swal.fire({
@@ -63,7 +64,20 @@ function agregarAlCarrito(id_productos, nombre, imagen, precio, stock_actual) {
             icon: 'warning',
         })
 
-    } else {
+    } else if (cantidad === vacio || cantidad == cero) {
+        Swal.fire({
+            title: 'Advertencia',
+            text: "Ingrese una cantidad",
+            icon: 'warning',
+        })
+    } else if (cantidad < cero) {
+        Swal.fire({
+            title: 'Advertencia',
+            text: "No se aceptan numeros negativos",
+            icon: 'warning',
+        })
+    }
+    else {
         let subtotal = cantidad * precio;
         let producto = {                                         //creamos un objeto para crear carrito
             "id_producto": id_productos,
@@ -102,9 +116,12 @@ function agregarAlCarrito(id_productos, nombre, imagen, precio, stock_actual) {
 
 
     }
-
-
 }
+
+
+
+
+
 function actualizarCantidadCarrito() {
     let carritoStorage = localStorage.getItem("carrito")     //Traemos el carrito si es que existe
     let cantidadTotal = 0;

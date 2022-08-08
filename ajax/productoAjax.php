@@ -41,13 +41,14 @@ switch ($_GET['op']) {
         $html = "";
         if (isset($respuesta)) {
             session_start();
-            $botonCarrito = "Inicie sesion para añadir al carrito";
+            $botonCarrito = "<h4><a style='text-decoration:none;color:red;'href='../vistas/login.php'>Iniciar sesion para añadir al carrito</a></h4>";
             $stockActual = "Stock ".$respuesta['stock_actual'];
             // compruebo si tengo un usuario logueado
             if (isset($_SESSION['id_usuario_web'])){
-                if ($respuesta['stock_actual'] > 0 ) {
+                if ($respuesta['stock_actual'] > 0) {
+        
                     $botonCarrito = "
-                    <input type='number' class='form-control' id='cantidad'>
+                    <input type='number' class='form-control' id='cantidad' min='1' max='15' value='1'>
                     <button type='button' class='btn btn-info mt-3' onClick='agregarAlCarrito(".$respuesta['id_productos'].", \"".$respuesta['nombre']."\", \"".$respuesta['nom_archivo']."\", ".$respuesta['precio_venta'].", ".$respuesta['stock_actual'].")'>Añadir al Carrito</button>
                     ";
                 }else{
