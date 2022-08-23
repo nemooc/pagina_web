@@ -662,8 +662,9 @@ footer .contenedor-redes i:hover {
   
 }
 .sectionTituloPagina h1 {
+  
   color: rgb(2, 2, 2);
-  font-size: 70px;
+  font-size: 4.4vw;
   font-family: "Teko", sans-serif;
 }
 .animate__fadeInDown {

@@ -21,8 +21,8 @@ class Usuario
     public static function enviarDatos ($dni,$nombre,$domicilio,$email,$localidad,$provincia,$telefono,$usuario,$clave){
         // Creamos venta
         $sql = "INSERT INTO clientes (dni,nombre,domicilio,email,localidad,provincia,telefono_celular,estado) values ($dni,'$nombre','$domicilio','$email','$localidad','$provincia','$telefono','ACTIVO')";
-        ejecutarConsulta($sql);
-        $sql = "INSERT INTO usuarios_web (usuario,clave,dni_clientes) values ('$usuario','$clave',$dni)";
+        $idCliente = ejecutarConsulta_retornarID($sql);
+        $sql = "INSERT INTO usuarios_web (usuario,clave,id_clientes) values ('$usuario','$clave',$idCliente)";
         ejecutarConsulta($sql);
         
         
