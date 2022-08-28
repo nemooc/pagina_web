@@ -12,10 +12,10 @@ class Ventas
    
     public static function terminarCompra ($total_venta, $id_producto, $nombre, $precio, $cantidad, $subtotal){
         date_default_timezone_set('America/Argentina/Buenos_Aires');
-        $dni = $_SESSION['dni_clientes'];
+        $idCliente = $_SESSION['id_clientes'];
         $fecha = date('Y-m-d');
         // Creamos venta
-        $sql = "INSERT INTO ventas (total_venta, dni, fecha, tipo_venta, tipo_de_factura, estado,estado_seguimiento) values ($total_venta,$dni,'$fecha','WEB','B','PENDIENTE','-')";
+        $sql = "INSERT INTO ventas (total_venta, id_clientes, fecha, tipo_venta, tipo_de_factura, estado,estado_seguimiento) values ($total_venta,$idCliente,'$fecha','WEB','B','PENDIENTE','-')";
         $idVenta = ejecutarConsulta_retornarID($sql);
 
         
@@ -35,8 +35,8 @@ class Ventas
     }
 
     public static function mostrarMisPedidos (){
-        $dni = $_SESSION['dni_clientes'];
-        $sql = "SELECT * from ventas  where dni = $dni and tipo_venta = 'WEB' order by numero_venta desc";
+        $idCliente = $_SESSION['id_clientes'];
+        $sql = "SELECT * from ventas  where id_clientes = $idCliente and tipo_venta = 'WEB' order by numero_venta desc";
       return ejecutarConsulta($sql);
         
         }

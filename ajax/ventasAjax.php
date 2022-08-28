@@ -35,7 +35,7 @@ switch ($_GET['op']) {
             $data[] = array( 
                 "numero_venta" => $reg->numero_venta,
                 "total_venta" => $reg->total_venta,   
-                "dni" => $reg->dni,
+                "id_clientes" => $reg->id_clientes,
                 "fecha" => $reg->fecha,
                 "estado" => $reg->estado,
                 "estado_seguimiento" => $reg->estado_seguimiento,

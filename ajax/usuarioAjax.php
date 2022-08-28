@@ -12,7 +12,7 @@ switch ($_GET['op']) {
         if (isset($respuesta)) {
             $_SESSION['id_usuario_web'] = $respuesta['id_usuario_web'];
             $_SESSION['usuario'] =  $respuesta['usuario'];
-            $_SESSION['dni_clientes'] =  $respuesta['dni_clientes'];
+            $_SESSION['id_clientes'] =  $respuesta['id_clientes'];
         }
         echo json_encode($respuesta);
         break;
